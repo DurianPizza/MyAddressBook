@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PresentSearchResult</class>
+ <widget class="QMainWindow" name="PresentSearchResult">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>678</width>
+    <height>384</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>678</width>
+    <height>384</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>678</width>
+    <height>384</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>查询联系人</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/Img/Img/blenderIcon.png</normaloff>:/Img/Img/blenderIcon.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="name">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>25</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>姓名</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="sex">
+    <property name="geometry">
+     <rect>
+      <x>205</x>
+      <y>30</y>
+      <width>25</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>性别</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="type">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>30</y>
+      <width>25</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>分组</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditName">
+    <property name="geometry">
+     <rect>
+      <x>65</x>
+      <y>30</y>
+      <width>120</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBoxSex">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>30</y>
+      <width>80</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>男</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>女</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="comboBoxGroup">
+    <property name="geometry">
+     <rect>
+      <x>415</x>
+      <y>30</y>
+      <width>120</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+   </widget>
+   <widget class="QTableView" name="tableView">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>641</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/*table view*/
+QTableView {
+    selection-background-color: rgb(252,233,161);
+	selection-foreground-color:black; 
+}
+
+QTable::item:selected{
+	color:black
+}
+
+QTableView QTableCornerButton::section {
+    background: lightblue;
+    border: 2px outset white;
+}
+
+/*Scroll Bar*/
+QScrollBar:vertical {
+    background:transparent;
+    width:9px;
+    margin: 0px 0px 2px 0px;
+}
+
+QScrollBar::handle:vertical {
+    background: rgb(195, 195, 195);
+    min-height: 20px;
+    border-radius: 3px;
+}
+
+QScrollBar::handle:vertical:hover{
+    background:rgba(0,0,0,30%);
+}
+
+QScrollBar::add-line:vertical {
+    height: 0px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical {
+    height: 0px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="search">
+    <property name="geometry">
+     <rect>
+      <x>555</x>
+      <y>30</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>查询</string>
+    </property>
+    <property name="shortcut">
+     <string>Return</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>678</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>lineEditName</tabstop>
+  <tabstop>comboBoxSex</tabstop>
+  <tabstop>comboBoxGroup</tabstop>
+  <tabstop>search</tabstop>
+  <tabstop>tableView</tabstop>
+ </tabstops>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

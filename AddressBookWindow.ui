@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddressBookWindow</class>
+ <widget class="QMainWindow" name="AddressBookWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>340</width>
+    <height>573</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>340</width>
+    <height>573</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>340</width>
+    <height>573</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>通信录</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/Img/Img/blenderIcon.png</normaloff>:/Img/Img/blenderIcon.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QListWidget" name="addressList">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>340</width>
+      <height>550</height>
+     </rect>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::CustomContextMenu</enum>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>340</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="addressItem">
+    <property name="title">
+     <string>联系人</string>
+    </property>
+    <addaction name="addItem"/>
+    <addaction name="searchItem"/>
+    <addaction name="modifyItem"/>
+    <addaction name="deleteItem"/>
+   </widget>
+   <widget class="QMenu" name="help">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="about"/>
+   </widget>
+   <widget class="QMenu" name="addressType">
+    <property name="title">
+     <string>联系人类别</string>
+    </property>
+    <addaction name="addType"/>
+    <addaction name="modifyType"/>
+    <addaction name="deleteType"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>账户</string>
+    </property>
+    <addaction name="logout"/>
+    <addaction name="exit"/>
+    <addaction name="destroy"/>
+   </widget>
+   <addaction name="addressType"/>
+   <addaction name="addressItem"/>
+   <addaction name="help"/>
+   <addaction name="menu"/>
+  </widget>
+  <action name="addItem">
+   <property name="text">
+    <string>添加联系人</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+A</string>
+   </property>
+  </action>
+  <action name="searchItem">
+   <property name="text">
+    <string>查询联系人</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+S</string>
+   </property>
+  </action>
+  <action name="modifyItem">
+   <property name="text">
+    <string>修改联系人</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+M</string>
+   </property>
+  </action>
+  <action name="deleteItem">
+   <property name="text">
+    <string>删除联系人</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+D</string>
+   </property>
+  </action>
+  <action name="about">
+   <property name="text">
+    <string>关于</string>
+   </property>
+   <property name="toolTip">
+    <string>关于</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Shift+A</string>
+   </property>
+  </action>
+  <action name="addType">
+   <property name="text">
+    <string>添加联系人类别</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+    </font>
+   </property>
+   <property name="shortcut">
+    <string>Shift+A</string>
+   </property>
+  </action>
+  <action name="modifyType">
+   <property name="text">
+    <string>修改联系人类别</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+M</string>
+   </property>
+  </action>
+  <action name="deleteType">
+   <property name="text">
+    <string>删除联系人类别</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+D</string>
+   </property>
+  </action>
+  <action name="logout">
+   <property name="text">
+    <string>注销</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="destroy">
+   <property name="text">
+    <string>销毁账户</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="exit">
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+ <slots>
+  <signal>searchButtonPressed()</signal>
+ </slots>
+</ui>

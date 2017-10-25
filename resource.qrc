@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/QSS" lang="AddressList.qss">
+        <file>QSS/AddressList.qss</file>
+        <file>QSS/Common.qss</file>
+        <file>QSS/Dialog.qss</file>
+    </qresource>
+    <qresource prefix="/Img">
+        <file>Img/blenderIcon.png</file>
+        <file>Img/downArrow.png</file>
+        <file>Img/qqAvatar.png</file>
+        <file>Img/rightArrow.png</file>
+    </qresource>
+</RCC>

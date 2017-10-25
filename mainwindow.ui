@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>411</width>
+    <height>263</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>411</width>
+    <height>263</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>411</width>
+    <height>263</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>登陆</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/Img/Img/blenderIcon.png</normaloff>:/Img/Img/blenderIcon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="login">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>150</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+     </font>
+    </property>
+    <property name="text">
+     <string>登陆</string>
+    </property>
+    <property name="shortcut">
+     <string>Return</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="regist">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>65</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+     </font>
+    </property>
+    <property name="text">
+     <string>注册</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="forget">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>105</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+     </font>
+    </property>
+    <property name="text">
+     <string>忘记密码？</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>60</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>用户名</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>100</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>密码</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="passwordLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>100</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>20</number>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="userNameComboBox">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>60</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+     </font>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="savePasswordCheckBox">
+    <property name="geometry">
+     <rect>
+      <x>172</x>
+      <y>190</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+     </font>
+    </property>
+    <property name="text">
+     <string>保存密码</string>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="busyProgressBar">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>80</y>
+      <width>118</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QProgressBar {
+    border: 2px solid grey;
+    border-radius: 10px;
+}
+
+QProgressBar::chunk {
+    background-color: #05B8CC;
+    width: 5px;
+    margin: 0.5px;
+}</string>
+    </property>
+    <property name="maximum">
+     <number>0</number>
+    </property>
+    <property name="value">
+     <number>-1</number>
+    </property>
+    <property name="textVisible">
+     <bool>false</bool>
+    </property>
+    <property name="format">
+     <string>%p%</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>411</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>记录</string>
+    </property>
+    <addaction name="deleteRecord"/>
+    <addaction name="clearAllRecord"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <action name="deleteRecord">
+   <property name="text">
+    <string>删除当前记录</string>
+   </property>
+  </action>
+  <action name="clearAllRecord">
+   <property name="text">
+    <string>清空所有记录</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>userNameComboBox</tabstop>
+  <tabstop>passwordLineEdit</tabstop>
+  <tabstop>login</tabstop>
+  <tabstop>savePasswordCheckBox</tabstop>
+  <tabstop>regist</tabstop>
+  <tabstop>forget</tabstop>
+ </tabstops>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

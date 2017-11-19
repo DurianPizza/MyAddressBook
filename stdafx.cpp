@@ -135,22 +135,22 @@ bool global::OpenDatabase()
                                );
     }
 
-        if (!db.open())
-        {
-            //QSqlError error = db.lastError();
-            //QString errorStr = QString("Failed to open database!Error: %1").arg(error.text());
+    if (!db.open())
+    {
+        //QSqlError error = db.lastError();
+        //QString errorStr = QString("Failed to open database!Error: %1").arg(error.text());
 
-/*Exception at 0x767fb802, code: 0xe06d7363: C++ exception, flags=0x1
+        /*Exception at 0x767fb802, code: 0xe06d7363: C++ exception, flags=0x1
  * (execution cannot be continued) (first chance)
  * at e:\project\addressbook\project\addressbook\stdafx.cpp:123
 ASSERT failure in QWidget: "Widgets must be created in the GUI thread.",
 file kernel\qwidget.cpp, line 1150
 Debug Error!*/
 
-            //throw std::runtime_error(errorStr.toStdString().c_str());
-            return false;
-        }
-        return true;
+        //throw std::runtime_error(errorStr.toStdString().c_str());
+        return false;
+    }
+    return true;
     //}catch(std::exception& e){
     //    QMessageBox::warning(NULL, "warning", e.what(), QMessageBox::Ok);
     //    return false;

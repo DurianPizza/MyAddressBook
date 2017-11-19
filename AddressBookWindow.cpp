@@ -88,11 +88,25 @@ AddressBookWindow::AddressBookWindow(QWidget *parent, const QString& userName) :
     typeNameEdit->setParent(ui->addressList); // 必须在ui->setupUi(this)后才能使用ui中的指针
     typeNameEdit->hide();
 
-    blankMenu->addActions({addTypeMenuItem, modifiedTypeMenuItem, deleteTypeMenuItem,
+    /*blankMenu->addActions({addTypeMenuItem, modifiedTypeMenuItem, deleteTypeMenuItem,
                           separator, addItemMenuItem, searchItemMenuItem, modifiedItemMenuItem,
                           deleteItemMenuItem});
 
-    typeMenu->addActions({modifiedTypeMenuItem, deleteTypeMenuItem});
+    typeMenu->addActions({modifiedTypeMenuItem, deleteTypeMenuItem});*/
+
+    QAction* list1[] = {addTypeMenuItem, modifiedTypeMenuItem, deleteTypeMenuItem,
+                        separator, addItemMenuItem, searchItemMenuItem, modifiedItemMenuItem,
+                        deleteItemMenuItem};
+    QList<QAction*> list_1;
+    for(auto a :list1)
+        list_1.append(a);
+    blankMenu->addActions(list_1);
+
+    QAction* list2[] = {modifiedItemMenuItem, deleteItemMenuItem};
+    QList<QAction*> list_2;
+    for(auto a :list2)
+        list_2.append(a);
+    typeMenu->addActions(list_2);
 
     //itemMenu->addActions({modifiedItemMenuItem, deleteItemMenuItem});
 
@@ -282,7 +296,7 @@ void AddressBookWindow::on_modifyType_triggered()
     }
 }
 
-// function: delete an existing type
+// function: deleting an existing type
 void AddressBookWindow::on_deleteType_triggered()
 {
     try{
@@ -907,6 +921,11 @@ void AddressBookWindow::GenerateItemCustomMenu(QListWidgetItem* selectedItem)
             this, SLOT(onCustomMenuRequestDeleteItem()));
 
     itemMenu->addMenu(moveToSubMenu);
-    itemMenu->addActions({seperator, modifiedItemMenuItem, deleteItemMenuItem});
+    //itemMenu->addActions({seperator, modifiedItemMenuItem, deleteItemMenuItem});
+    QAction* list2[] = {seperator, modifiedItemMenuItem, deleteItemMenuItem};
+    QList<QAction*> list_2;
+    for(auto a :list2)
+        list_2.append(a);
+    itemMenu->addActions(list_2);
     itemMenu->exec(QCursor::pos());
 }

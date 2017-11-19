@@ -397,4 +397,5 @@ void MainWindow::on_clearAllRecord_triggered()
     }catch(std::exception e){
         QMessageBox::warning(NULL, "warning", e.what(), QMessageBox::Ok);
     }
+
 }
